@@ -1,0 +1,156 @@
+.box {
+    
+    
+    &__col{
+        width:50%;
+        height: 650px;
+        background:#fcfcfc;
+        border-radius: 20px 0 0 20px;
+        padding: 30px;
+        box-shadow: 1px 1px 10px rgb(187, 183, 183);
+        margin-bottom: 20px;
+        overflow-y: scroll;
+
+        &:nth-child(1){
+            margin-right: 40px;
+        }
+
+        &:nth-child(2) li{
+            transform: scale(0.8);
+        }
+
+        &:nth-child(2) .box__texts-box{
+            padding-left: 0 !important;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+          
+        &::-webkit-scrollbar-thumb {
+            background: #93d824;
+        }
+          
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+
+    &__result-item{
+        background: #ff9100  !important;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    &__close{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        font-size: 30px;
+        border: none;
+        background: #2b1919;
+        border-radius: 20%;
+        color: red;
+        position:absolute;
+        right: 13px;
+        top: 13px;
+    }
+
+
+    &__img-box {
+        width: 300px;
+        height: 150px;
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__texts-box{
+        padding-left: 50px;
+    }
+
+    &__item{
+        border-radius: 20px;
+        padding: 15px;
+        background:#a0bd1e;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+    }
+
+    &__desc {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 0 0 8px 0;
+        color: #fff;
+    }
+
+    &__sum{
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .sub-box__total,
+    .box__total-tax,
+    .box__total-all{
+        margin-left: 10px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &__btn {
+        border: 1px solid transparent;
+        background: #fff;
+        padding: 5px;
+        border-radius: 20px;
+        color: #41c718;
+        font-weight: 700;
+        transition: all 0.3s;
+        box-shadow: 1px 1px 5px #fff;
+        text-transform: uppercase;
+
+        &:hover{
+            box-shadow: 0px 0px 4px #fff;
+        }
+
+        &:active{
+            box-shadow: 0px 0px 2px #0413ec;
+        }
+    }
+
+    &__sums-box{
+        background: #d85905;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+	&__sums {
+        font-weight: 700;
+        color: #fff;
+        font-size: 19px;
+        display: flex;
+        align-items: center;
+	}
+
+	&__total {
+        font-size: 35px;
+        margin-left: 15px;
+	}
+}
