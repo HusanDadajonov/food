@@ -3,12 +3,12 @@
     
     &__col{
         width:50%;
-        height: 650px;
+        height: 600px;
         background:#fcfcfc;
         border-radius: 20px 0 0 20px;
         padding: 30px;
+        margin-top: 60px;
         box-shadow: 1px 1px 10px rgb(187, 183, 183);
-        margin-bottom: 20px;
         overflow-y: scroll;
 
         &:nth-child(1){
@@ -17,6 +17,8 @@
 
         &:nth-child(2) li{
             transform: scale(0.8);
+            z-index: 100;
+            position: relative;
         }
 
         &:nth-child(2) .box__texts-box{
@@ -43,9 +45,8 @@
     }
 
     &__result-item{
-        background: #ff9100  !important;
+        background: #bfdf31  !important;
         border-radius: 20px;
-        padding: 15px;
     }
 
     &__close{
@@ -56,12 +57,27 @@
         justify-content: center;
         font-size: 30px;
         border: none;
-        background: #2b1919;
+        background:none;
         border-radius: 20%;
-        color: red;
+        padding:22px !important;
+        color: #fff;
+        background: transparent;
         position:absolute;
-        right: 13px;
-        top: 13px;
+        left: 50%;
+        transform: translate(-50%,-58px);
+        z-index: 999;
+        
+        &::before{
+            content: "";
+            width: 100px;
+            height: 50px;
+            position:absolute;
+            background: #bfdf31;
+            z-index: -1;
+            border-radius: 20px 20px 0 0;
+
+            
+        }
     }
 
 
@@ -111,11 +127,13 @@
     .box__total-tax,
     .box__total-all{
         margin-left: 10px;
-        font-size: 32px;
+        font-size: 20px;
         font-weight: 700;
+        color: #fff;
     }
 
     &__btn {
+        width: 240px;
         border: 1px solid transparent;
         background: #fff;
         padding: 5px;
@@ -125,7 +143,6 @@
         transition: all 0.3s;
         box-shadow: 1px 1px 5px #fff;
         text-transform: uppercase;
-
         &:hover{
             box-shadow: 0px 0px 4px #fff;
         }
@@ -136,21 +153,35 @@
     }
 
     &__sums-box{
-        background: #d85905;
-        padding: 20px;
+        position:fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+        width: 90%;
+        background: #b40909;
+        padding: 10px;
         border-radius: 20px;
     }
 
 	&__sums {
         font-weight: 700;
         color: #fff;
-        font-size: 19px;
+        font-size: 16px;
         display: flex;
         align-items: center;
 	}
 
 	&__total {
-        font-size: 35px;
+        font-size: 18px;
         margin-left: 15px;
 	}
+}
+
+
+.margin-bottom{
+    margin-bottom: 100px;
+}
+
+.bi-trash{
+    pointer-events: none;
 }
